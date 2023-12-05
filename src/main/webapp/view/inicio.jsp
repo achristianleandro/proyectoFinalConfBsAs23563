@@ -65,7 +65,7 @@
                                 <a class="nav-link" href="#form-oradores">Conviértete en orador</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-success" href="tickets/comprarTicket.html">Comprar Ticket</a>
+                                <a class="nav-link text-success" href="../tickets/comprarTicket.html">Comprar Ticket</a>
                             </li>
                             <li class="">
                             	<!-- Button trigger modal -->
@@ -271,13 +271,12 @@
                 <article class="col-lg bg-dark text-white pt-4">
                     <span class="fs-3 fw-bold">Bs As - Octubre</span>
                     <p class="fs-6">Buenos Aires es la provincia y localidad mas grande del estado de Argentina. En los
-                        Estados
-                        Unidos, Honolulu es la mas sureña de entre las principales ciudades estadounidenses. Aunque el
+                        Estados Unidos, Honolulu es la mas sureña de entre las principales ciudades estadounidenses. Aunque el
                         nombre de Honolulu se refiere al área urbana en la costa sureste de la isla de Ohau, la ciudad y
                         el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad
                         (aproximadamente 600 km<sup>2</sup> de superficie).
                     </p>
-                    <a href="#" class="btn btn-outline-light mb-4">Conocé más</a>
+                    <a href="#" class="btn btn-outline-light mb-4">ConocÃ© mÃ¡s</a>
 
                 </article>
             </div>
@@ -305,7 +304,7 @@
                 <div class="row">
                     <div class="col-md mb-3">
                         <textarea name="tema" id="tema" rows="5" class="form-control"
-                            placeholder="Sobre qué quieres hablar?" required></textarea>
+                            placeholder="Sobre quï¿½ quieres hablar?" required></textarea>
                         <div class="small text-start mt-2">Recuerda incluir un título para tu charla</div>
 
                     </div>

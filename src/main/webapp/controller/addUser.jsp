@@ -21,7 +21,7 @@
 		Integer insOk=st.executeUpdate("INSERT INTO usuarios (user,pass,rol) VALUES ('"+user+"','"+pass+"','user')");
 		
 		if(insOk==1) {
-			response.sendRedirect("../view/login.jsp?mensaje=El%20usuario%20se%20creó%20exitosamente");
+			response.sendRedirect("../view/login.jsp?mensaje=El%20usuario%20se%20creÃ³%20exitosamente");
 		} else {
 			response.sendRedirect("../view/registro.jsp?mensaje=Error%20al%20crear%20el%20usuario");		
 		}
@@ -29,7 +29,7 @@
 	}
 	catch(Exception e){
 		response.sendRedirect("../view/registro.jsp?mensaje=El%20usuario%20ya%20existe.%20Intente%20con%20otro%20diferente");
-		
+		e.printStackTrace();
 	}
 	
 %>

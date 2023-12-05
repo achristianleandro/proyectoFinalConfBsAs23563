@@ -120,7 +120,7 @@
 	            <input type="text" class="form-control mb-3" id="apeAdd" name="apeAdd" placeholder="Apellido">
 	            <input type="text" class="form-control mb-3" id="emailAdd" name="emailAdd" placeholder="Email">
 	            <input type="text" class="form-control mb-3" id="dniAdd" name="dniAdd" placeholder="DNI">
-	            <textarea rows="4" class="form-control mb-3" id="temasAdd" name="temasAdd" placeholder="Escriba una descripcion de los temas a tratar"></textarea>
+	            <textarea rows="4" class="form-control mb-3" id="temasAdd" name="temasAdd" placeholder="Escriba una descripción de los temas a tratar"></textarea>
 	          </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -143,7 +143,7 @@
 	      <div class="modal-body">
 	        <form action="../controller/delOrador.jsp" method="post">
 	          <div class="mb-3 text-center">
-	            <label for="recipient-name" class="col-form-label">Â¿Desea eliminar el orador?</label>
+	            <label for="recipient-name" class="col-form-label">¿Desea eliminar el orador?</label>
 	            <input type="hidden" class="form-control" id="recipient-name" name="id">
 	          </div>
 		      <div class="modal-footer">
@@ -166,10 +166,13 @@
 	      </div>
 	      <div class="modal-body">
 	        <form action="../controller/updOrador.jsp" method="post">
-	          <div class="mb-3 text-center">
+	          <div class="mb-3 text-start">
 	            <input type="hidden" class="form-control mb-3" id="idUpd" name=idUpd>
+	            <span>Nombre:</span>
 	            <input type="text" class="form-control mb-3" id="nom" name="nom">
+	            <span>Apellido:</span>
 	            <input type="text" class="form-control mb-3" id="ape" name="ape">
+	            <span>Email:</span>
 	            <input type="text" class="form-control mb-3" id="email" name="email">
 	          </div>
 		      <div class="modal-footer">

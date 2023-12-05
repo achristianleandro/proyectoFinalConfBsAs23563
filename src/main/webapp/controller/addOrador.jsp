@@ -15,7 +15,7 @@
 		Integer insOk=st.executeUpdate("INSERT INTO oradores (nombre, apellido, email, dni, etiquetas,temas) VALUES ('"+nom+"','"+ape+"','"+email+"',"+dni+",'','') ");
 		
 		if(insOk==1) {
-			response.sendRedirect("../view/listOra.jsp?mensaje=El%20orador%20se%20creó%20exitosamente");
+			response.sendRedirect("../view/listOra.jsp?mensaje=El%20orador%20se%20creÃ³%20exitosamente");
 		} else {
 			response.sendRedirect("../view/listOra.jsp?mensaje=Error%20al%20crear%20el%20orador");		
 		}

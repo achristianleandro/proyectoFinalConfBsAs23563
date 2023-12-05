@@ -25,7 +25,7 @@ function validarUser() {
         document.getElementById("mensaje").innerHTML="El usuario debe contener un @"
         document.getElementById("mensaje").className="bg-danger  m-1 p-1 border rounded "
     } else if(!user.toLowerCase().includes("codoacodo.edu.ar")){    
-        document.getElementById("mensaje").innerHTML="El usuario debe contener dominio codoACodo.edu.ar"
+        document.getElementById("mensaje").innerHTML="El usuario debe contener dominio codoacodo.edu.ar"
         document.getElementById("mensaje").className="bg-danger  m-1 p-1 border rounded "
 
     } else {
@@ -93,7 +93,8 @@ function validarPassDiscriminada() {
         document.getElementById("mensaje").className="bg-danger m-1 p-1 border rounded text-center "        
     } else {
         document.getElementById("mensaje").innerHTML=""
-        document.getElementById("mensaje").className=""        
+        document.getElementById("mensaje").className=""
+        passIgualesII()        
         
     }
     
@@ -111,16 +112,16 @@ function ocultarPass() {
     document.getElementById("icono").setAttribute("onclick","mostrarPass()")
 }
 
-function mostrarRepPass() {
-    document.getElementById("repPass").setAttribute("type","text")
+function mostrarRepPassII() {
+    document.getElementById("repPassII").setAttribute("type","text")
     document.getElementById("icono2").setAttribute("class", "bi bi-eye-fill")
-    document.getElementById("icono2").setAttribute("onclick","ocultarRepPass()")
+    document.getElementById("icono2").setAttribute("onclick","ocultarRepPassII()")
 }
 
-function ocultarRepPass() {
-    document.getElementById("repPass").setAttribute("type","password")
+function ocultarRepPassII() {
+    document.getElementById("repPassII").setAttribute("type","password")
     document.getElementById("icono2").setAttribute("class", "bi bi-eye-slash-fill")
-    document.getElementById("icono2").setAttribute("onclick","mostrarRepPass()")
+    document.getElementById("icono2").setAttribute("onclick","mostrarRepPassII()")
 }
 
 //todo: verificar que las pass sean iguales
@@ -141,18 +142,17 @@ function passIguales(){
 }
 
 function passIgualesII() {
-    const pass = document.getElementById("repPass").value;
+    const pass = document.getElementById("pass").value;
     const passII = document.getElementById('repPassII').value;
-
-
-    if (passII === pass) {
-        document.getElementById("btn-enviar").removeAttribute("disabled");
-	    document.getElementById("mensaje").innerHTML=""
-        document.getElementById("mensaje").className=""
+	
+	if (passII === pass) {
+		document.getElementById("btn-enviar").removeAttribute("disabled");
+		document.getElementById("mensaje").innerHTML=""
+		document.getElementById("mensaje").className=""
     } else {
-        document.getElementById("btn-enviar").setAttribute("disabled", "");
-	    document.getElementById("mensaje").innerHTML="Las contraseñas ingresadas no coinciden"
-        document.getElementById("mensaje").className="bg-danger m-1 p-1 border rounded text-center "
+		document.getElementById("btn-enviar").setAttribute("disabled", "");
+		document.getElementById("mensaje").innerHTML="Las contraseñas ingresadas no coinciden"
+		document.getElementById("mensaje").className="bg-danger m-1 p-1 border rounded text-center"
     }
-
+	
 }

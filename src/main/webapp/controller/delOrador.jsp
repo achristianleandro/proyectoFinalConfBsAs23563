@@ -10,14 +10,15 @@
 		Integer deleteOk=st.executeUpdate("DELETE FROM oradores WHERE id="+id);
 		
 		if(deleteOk==1) {
-			response.sendRedirect("../view/listOra.jsp?mensaje=El%20usuario%20se%20eliminó%20exitosamente");
+			response.sendRedirect("../view/listOra.jsp?mensaje=El%20orador%20se%20eliminÃ³%20exitosamente");
 		} else {
-			response.sendRedirect("../view/listOra.jsp?mensaje=El%20usuario%20no%20se%20pudo%20eliminar");
+			response.sendRedirect("../view/listOra.jsp?mensaje=El%20orador%20no%20se%20pudo%20eliminar");
 		}
 
 	}
 	catch(Exception e){
-		response.sendRedirect("../view/listOra.jsp?mensaje=El%20usuario%20no%20se%20pudo%20eliminar");
+		response.sendRedirect("../view/listOra.jsp?mensaje=El%20orador%20no%20se%20pudo%20eliminar");
+		e.printStackTrace();
 	}
 	
 %>
