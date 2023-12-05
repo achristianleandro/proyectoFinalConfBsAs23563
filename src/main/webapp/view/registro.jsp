@@ -51,7 +51,7 @@
                                 <a class="nav-link" href="#lugar-fecha">El lugar y la fecha</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#form-oradores">Conviértete en orador</a>
+                                <a class="nav-link" href="#form-oradores">ConviÃ©rtete en orador</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-success" href="tickets/comprarTicket.html">Comprar Ticket</a>
@@ -71,9 +71,9 @@
         <div>
             <form action="../controller/addUser.jsp" method="post">
                 <input type="email" onkeyup="validarUser()" name="user" id="user" class="form-control mb-3" placeholder="usuario" required>
-                <!-- <input type="password" onkeyup="mostrarFortCant()" name="pass" id="pass" class="form-control mb-3" placeholder="contraseña" required> -->
+                <!-- <input type="password" onkeyup="mostrarFortCant()" name="pass" id="pass" class="form-control mb-3" placeholder="contraseÃ±a" required> -->
                 <div class="input-group mb-3">
-                    <input type="password" id="pass" name="pass" onkeyup="validarPassDiscriminada()" class="form-control" placeholder="Constraseña" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="password" id="pass" name="pass" onkeyup="validarPassDiscriminada()" class="form-control" placeholder="ConstraseÃ±a" aria-label="Username" aria-describedby="basic-addon1">
                     <span class="input-group-text" id="basic-addon1">
                         <a href="#">
                             <i class="bi bi-eye-slash-fill" id="icono" onclick="mostrarPass()"></i>
@@ -82,7 +82,7 @@
                 </div>
                 
                 <div class="input-group mb-3">
-                	<input type="password" name="repPass" id="repPass" onkeyup="passIguales()" class="form-control" placeholder="Reingrese la constraseña" required>
+                	<input type="password" name="repPass" id="repPass" onkeyup="passIguales()" class="form-control" placeholder="Reingrese la constraseÃ±a" required>
                     <span class="input-group-text" id="basic-addon1">
                         <a href="#">
                             <i class="bi bi-eye-slash-fill" id="icono2" onclick="mostrarRepPass()"></i>
@@ -90,8 +90,8 @@
                     </span>
                 </div>
                   
-<!--                 <input type="password" name="repPass" id="repPass" onkeyup="passIguales()" class="form-control mb-3" placeholder="Reingrese la constraseña" required> -->
-                <input type="submit" value="Registrar" class="btn btn-primary mb-3">
+		<input type="password" name="repPass" id="repPass" onkeyup="passIguales()" class="form-control mb-3" placeholder="Reingrese la constraseÃ±a" required> 
+                <input type="submit" value="Registrar" class="btn btn-primary mb-3" disabled>
                 <input type="reset" value="Limpiar" class="btn btn-primary mb-3">
                 <div id="mensaje"></div>
             </form>
@@ -110,16 +110,16 @@
  
     </main>
 
-    <!-- Pie de página -->
+    <!-- Pie de pÃ¡gina -->
     <footer
         class="d-flex flex-column flex-lg-row justify-content-center align-items-center fw-bold column-gap-4 row-gap-3 py-4 mt-5">
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta página no se encuentra disponible');">Preguntas frecuentes</a>
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta página no se encuentra disponible');">Contáctanos</a>
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta página no se encuentra disponible');">Prensa</a>
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta página no se encuentra disponible');">Conferencias</a>
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta página no se encuentra disponible');">Términos y condiciones</a>
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta página no se encuentra disponible');">Privacidad</a>
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta página no se encuentra disponible');">Estudiantes</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta pÃ¡gina no se encuentra disponible');">Preguntas frecuentes</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta pÃ¡gina no se encuentra disponible');">ContÃ¡ctanos</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta pÃ¡gina no se encuentra disponible');">Prensa</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta pÃ¡gina no se encuentra disponible');">Conferencias</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta pÃ¡gina no se encuentra disponible');">TÃ©rminos y condiciones</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta pÃ¡gina no se encuentra disponible');">Privacidad</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta pÃ¡gina no se encuentra disponible');">Estudiantes</a>
         </div>
 
     </footer>
