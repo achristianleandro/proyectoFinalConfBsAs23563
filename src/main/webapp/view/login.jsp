@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 </head>
 
-<body class="bg-body-secondary">
+<body class="bg-body-secondary position-relative min-vh-100">
     <!-- Barra de navegacion -->
     <header>
 
@@ -51,7 +51,7 @@
                                 <a class="nav-link" href="#lugar-fecha">El lugar y la fecha</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#form-oradores">Conviértete en orador</a>
+                                <a class="nav-link" href="#form-oradores">ConviÃ©rtete en orador</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-success" href="tickets/comprarTicket.html">Comprar Ticket</a>
@@ -65,18 +65,18 @@
 
     <main>
         <div class="container ">
-		<div class="text-center fs-3 my-4">Iniciar sesión</div>
+		<div class="text-center fs-3 my-4">Iniciar sesiÃ³n</div>
 		
 		<div class="d-flex justify-content-center">
 			<form action="../controller/checkLogin.jsp" method="post">
 				<input type="email" name="user" class="form-control mb-3" placeholder="Usuario" required>
-				<input type="password" name="pass" class="form-control mb-3" placeholder="Contraseña" required>
+				<input type="password" name="pass" class="form-control mb-3" placeholder="ContraseÃ±a" required>
 				<input type="submit" value="Enviar" class="btn btn-primary mb-3">
 			</form>
 		</div>
 		
 		<div class="text-center fs-6 my-1">
-			<p>Si aún no posee un usuario: <a href="registro.jsp">Crear cuenta</a></p>
+			<p>Si aÃºn no posee un usuario: <a href="registro.jsp">Crear cuenta</a></p>
 			
 		</div>
 		
@@ -91,16 +91,16 @@
 		</div>
     </main>
 
-    <!-- Pie de página -->
+    <!-- Pie de pÃ¡gina -->
     <footer
-        class="d-flex flex-column flex-lg-row justify-content-center align-items-center fw-bold column-gap-4 row-gap-3 py-4 mt-5">
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta página no se encuentra disponible');">Preguntas frecuentes</a>
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta página no se encuentra disponible');">Contáctanos</a>
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta página no se encuentra disponible');">Prensa</a>
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta página no se encuentra disponible');">Conferencias</a>
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta página no se encuentra disponible');">Términos y condiciones</a>
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta página no se encuentra disponible');">Privacidad</a>
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta página no se encuentra disponible');">Estudiantes</a>
+        class="d-flex flex-column flex-lg-row justify-content-center align-items-center fw-bold column-gap-4 row-gap-3 py-4 mt-5 position-absolute bottom-0 vw-100">
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta pÃ¡gina no se encuentra disponible');">Preguntas frecuentes</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta pÃ¡gina no se encuentra disponible');">ContÃ¡ctanos</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta pÃ¡gina no se encuentra disponible');">Prensa</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta pÃ¡gina no se encuentra disponible');">Conferencias</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta pÃ¡gina no se encuentra disponible');">TÃ©rminos y condiciones</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta pÃ¡gina no se encuentra disponible');">Privacidad</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta pÃ¡gina no se encuentra disponible');">Estudiantes</a>
         </div>
 
     </footer>
