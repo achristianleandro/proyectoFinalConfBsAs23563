@@ -141,14 +141,18 @@ function passIguales(){
 }
 
 function passIgualesII() {
-    const pass = document.getElementById("pass").value;
-    const passII = document.getElementById('repPass').value;
+    const pass = document.getElementById("repPass").value;
+    const passII = document.getElementById('repPassII').value;
 
 
     if (passII === pass) {
         document.getElementById("btn-enviar").removeAttribute("disabled");
+	    document.getElementById("mensaje").innerHTML=""
+        document.getElementById("mensaje").className=""
     } else {
         document.getElementById("btn-enviar").setAttribute("disabled", "");
+	    document.getElementById("mensaje").innerHTML="Las contraseñas ingresadas no coinciden"
+        document.getElementById("mensaje").className="bg-danger m-1 p-1 border rounded text-center "
     }
 
 }
