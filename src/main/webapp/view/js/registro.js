@@ -139,3 +139,16 @@ function passIguales(){
 
 	
 }
+
+function passIgualesII() {
+    const pass = document.getElementById("pass").value;
+    const passII = document.getElementById('repPass').value;
+
+
+    if (passII === pass) {
+        document.getElementById("btn-enviar").removeAttribute("disabled");
+    } else {
+        document.getElementById("btn-enviar").setAttribute("disabled", "");
+    }
+
+}
