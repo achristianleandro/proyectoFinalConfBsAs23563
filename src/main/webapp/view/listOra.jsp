@@ -59,7 +59,17 @@
 			Statement st=conex.conectar();
 			
 			//le hago la consulta sql, traigo la tabla usuarios
-			ResultSet rs=st.executeQuery("SELECT * FROM oradores");
+			
+			String buscar=request.getParameter("buscar");
+			ResultSet rs;
+			
+			if(buscar!=null){
+				rs=st.executeQuery("SELECT * FROM oradores WHERE nombre LIKE '%"+buscar+"%' OR apellido LIKE '%"+buscar+"%';");
+			} else {
+				rs=st.executeQuery("SELECT * FROM oradores");
+			}
+			
+			//ResultSet rs=st.executeQuery("SELECT * FROM oradores");
 			
 			while(rs.next()) {
 				out.println("<tr>");
