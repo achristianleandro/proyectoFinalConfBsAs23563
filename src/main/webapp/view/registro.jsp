@@ -91,7 +91,7 @@
                 </div>
                   
 		<input type="password" name="repPass" id="repPass" onkeyup="passIguales()" class="form-control mb-3" placeholder="Reingrese la constraseña" required> 
-                <input type="submit" value="Registrar" class="btn btn-primary mb-3" disabled>
+                <input type="submit" value="Registrar" class="btn btn-primary mb-3" id="btn-enviar" disabled>
                 <input type="reset" value="Limpiar" class="btn btn-primary mb-3">
                 <div id="mensaje"></div>
             </form>
