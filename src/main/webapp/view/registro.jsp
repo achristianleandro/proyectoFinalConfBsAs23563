@@ -96,6 +96,7 @@
 					 
 	                <input type="submit" value="Registrar" class="btn btn-primary mb-3" id="btn-enviar" disabled>
 	                <input type="reset" value="Limpiar" class="btn btn-primary mb-3">
+	                <div>Si ya posee un usuario: <a href="login.jsp">Volver</a></div>	                	
 	                <div id="mensaje"></div>
 	            </form>
 	
