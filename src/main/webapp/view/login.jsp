@@ -23,7 +23,7 @@
 
         <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand ms-5" href="#">
+                <a class="navbar-brand ms-5" href="../index.jsp">
                     <img src="images/codoacodo.png" alt="Logo CAC" class="animate__animated animate__flipInX w-25">
                     <span>Conf BsAs</span>
                 </a>
@@ -42,19 +42,19 @@
                             <li class="nav-item">
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#conferencia">La conferencia</a>
+                                <a class="nav-link" href="../index.jsp#conferencia">La conferencia</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#oradores">Los oradores</a>
+                                <a class="nav-link" href="../index.jsp#oradores">Los oradores</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#lugar-fecha">El lugar y la fecha</a>
+                                <a class="nav-link" href="../index.jsp#lugar-fecha">El lugar y la fecha</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#form-oradores">Conviértete en orador</a>
+                                <a class="nav-link" href="../index.jsp#form-oradores">Conviértete en orador</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-success" href="tickets/comprarTicket.html">Comprar Ticket</a>
+                                <a class="nav-link text-success" href="../tickets/comprarTicket.html">Comprar Ticket</a>
                             </li>
                         </ul>
                     </span>

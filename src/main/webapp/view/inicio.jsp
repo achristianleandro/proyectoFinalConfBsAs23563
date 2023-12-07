@@ -16,15 +16,22 @@
 
 <body class="bg-body-secondary">
 	<%
+		ConexionDB conex=new ConexionDB();
+		Statement st=conex.conectar();
+		ResultSet rs;
+		
 		String id=request.getParameter("id");
 		String na=new String();
+		String email=new String();
+		String permisos=new String();
 		String foto=new String();
+		
 		if(id!=null) {
-			ConexionDB conex=new ConexionDB();
-			Statement st=conex.conectar();
-			ResultSet rs=st.executeQuery("SELECT * FROM usuarios WHERE id="+id);
+			rs=st.executeQuery("SELECT * FROM usuarios WHERE id="+id);
 			rs.next();
 			na=rs.getString("nombre") + " "+ rs.getString("apellido");
+			email=rs.getString("user");
+			permisos=rs.getString("rol");
 			foto=rs.getString("fotoPerfil");
 		}		
 	%>
@@ -77,14 +84,16 @@
 	                                <div class="modal-dialog modal-dialog-centered" role="document">
 	                                    <div class="modal-content">
 	                                        <div class="modal-header">
-	                                            <h5 class="modal-title" id="exampleModalLongTitle">Datos de usuario</h5>
+	                                            <h5 class="modal-title" id="exampleModalLongTitle">Ficha del usuario</h5>
 	                                        </div>
 	                                        <div class="modal-body">
-	                                            <div class="text-center w50">
-	                                                <img src="<% out.print(foto); %>" alt="Foto de perfil" id="perfil"
+	                                            <div class="text-center w-100">
+	                                                <img src="<% out.print(foto); %>" style='width:100%;height:20rem;' alt="Foto de perfil" id="perfil"
 	                                                    class="animate__animated animate__zoomIn mb-3">
 	                                            </div>
 	                                            <p>Nombre y apellido: <% out.print(na); %></p>
+	                                            <p>Email: <% out.print(email); %></p>
+	                                            <p>Usted es <% out.print(permisos); %></p>
 	                                        </div>
 	                                        <div class="modal-footer">
 	                                            <button type="button" class="btn btn-secondary"
@@ -133,7 +142,7 @@
                                         </p>
                                         <div>
                                             <a href="#form-oradores" class="btn btn-outline-light me-2 my-2">Quiero ser orador</a>
-                                            <a href="tickets/comprarTicket.html" class="btn btn-success">Comprar tickets</a>
+                                            <a href="../tickets/comprarTicket.html" class="btn btn-success">Comprar tickets</a>
                                         </div>
                                     </div>
                                 </div>
@@ -208,14 +217,14 @@
         </section>
 
         <!-- Oradores -->
-        <section id="oradores" class="d-flex justify-content-center flex-wrap row-gap-2 column-gap-4 mt-3">
+        <section id="oradores" class="d-flex justify-content-center flex-wrap row-gap-3 column-gap-4 mt-3 w-75 mx-auto">
 
             <div class="col-12 text-center">
                 <span class="d-block fs-6">CONOCE A LOS</span>
                 <span class="d-block fw-bold fs-3">ORADORES</span>
             </div>
 
-
+			<!-- 
             <article>
                 <div class="sombra card" style="width: 18rem;">
                     <img src="images/steve.jpg" class="card-img-top" alt="Steve Jobs">
@@ -260,6 +269,27 @@
                     </div>
                 </div>
             </article>
+            -->
+			
+			<%
+			rs=st.executeQuery("SELECT * FROM oradores");
+		       while(rs.next()) {
+		       	out.println("<article");
+		       	out.println("<div class='sombra card' style='width: 18rem;height:35rem;'>");
+		       	out.println("<img src='"+rs.getString("fotoPerfil")+"' height='300' class='card-img-top' alt='"+rs.getString("nombre")+"'>");
+		       	out.println("<div class='card-body'>");
+		       	out.println("<button type='button' class='btn btn-secondary'>Negocios</button>");
+		       	out.println("<button type='button' class='btn btn-danger'>Startups</button>");
+		       	out.println("<span class='nombre-orador'>"+rs.getString("nombre") +" "+ rs.getString("apellido")+"</span>");
+		       	out.println("<p class='card-text'>"+rs.getString("temas")+"</p>");
+		       	out.println("</div>");
+		       	out.println("</div>");
+		       	out.println("</article>");
+		       }
+			
+			%>
+			
+            
         </section>
 
         <!-- Img con info -->
@@ -304,7 +334,7 @@
                 <div class="row">
                     <div class="col-md mb-3">
                         <textarea name="tema" id="tema" rows="5" class="form-control"
-                            placeholder="Sobre quï¿½ quieres hablar?" required></textarea>
+                            placeholder="Sobre qué quieres hablar?" required></textarea>
                         <div class="small text-start mt-2">Recuerda incluir un título para tu charla</div>
 
                     </div>
