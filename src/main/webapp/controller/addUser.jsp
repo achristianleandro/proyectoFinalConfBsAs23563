@@ -18,7 +18,7 @@
 	ConexionDB conex=new ConexionDB();
 	Statement st=conex.conectar();
 	try{
-		Integer insOk=st.executeUpdate("INSERT INTO usuarios (user,pass,rol) VALUES ('"+user+"','"+pass+"','user')");
+		Integer insOk=st.executeUpdate("INSERT INTO usuarios (user,pass,rol) VALUES ('"+user+"','"+pass+"','espectador')");
 		
 		if(insOk==1) {
 			response.sendRedirect("../view/login.jsp?mensaje=El%20usuario%20se%20creó%20exitosamente");

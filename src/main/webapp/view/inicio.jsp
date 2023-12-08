@@ -306,7 +306,7 @@
                         el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad
                         (aproximadamente 600 km<sup>2</sup> de superficie).
                     </p>
-                    <a href="#" class="btn btn-outline-light mb-4">Conoc√© m√°s</a>
+                    <a href="#" class="btn btn-outline-light mb-4">ConocÈ m·s</a>
 
                 </article>
             </div>

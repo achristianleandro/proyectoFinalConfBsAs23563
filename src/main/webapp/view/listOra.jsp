@@ -119,7 +119,7 @@
                                 <input type="text" class="form-control mb-3" id="apeAdd" name="apeAdd" placeholder="Apellido">
                                 <input type="text" class="form-control mb-3" id="emailAdd" name="emailAdd" placeholder="Email">
                                 <input type="text" class="form-control mb-3" id="dniAdd" name="dniAdd" placeholder="DNI">
-                                <input type="text" class="form-control mb-3" id="etiquetasAdd" name="dniAdd" placeholder="Etiquetas">
+                                <input type="text" class="form-control mb-3" id="etiquetasAdd" name="etiquetasAdd" placeholder="Etiquetas">
                                 <textarea rows="4" class="form-control mb-3" id="temasAdd" name="temasAdd" placeholder="Escriba una descripción de los temas a tratar"></textarea>
                             </div>
                             <div class="modal-footer">

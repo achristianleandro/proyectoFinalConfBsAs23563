@@ -18,12 +18,12 @@
 </head>
 
 <body class="bg-body-secondary">
-    <!-- Barra de navegaciÃ³n -->
+    <!-- Barra de navegación -->
     <header>
 
         <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand ms-5" href="#">
+                <a class="navbar-brand ms-5"  href="../index.jsp">
                     <img src="images/codoacodo.png" alt="Logo CAC" class="animate__animated animate__flipInX w-25">
                     <span>Conf BsAs</span>
                 </a>

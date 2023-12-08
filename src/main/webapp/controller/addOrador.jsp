@@ -7,8 +7,8 @@
 	String ape=request.getParameter("apeAdd");
 	String email=request.getParameter("emailAdd");
 	String dni=request.getParameter("dniAdd");
-        String temas=request.getParameter("temasAdd");
-        String etiquetas=request.getParameter("etiquetasAdd");
+    String temas=request.getParameter("temasAdd");
+    String etiquetas=request.getParameter("etiquetasAdd");
 	
 	
 	ConexionDB conex=new ConexionDB();
