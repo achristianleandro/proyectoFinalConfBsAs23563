@@ -69,7 +69,7 @@
                                 <a class="nav-link" href="#lugar-fecha">El lugar y la fecha</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#form-oradores">ConviÈrtete en orador</a>
+                                <a class="nav-link" href="#form-oradores">Convi√©rtete en orador</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-success" href="../tickets/comprarTicket.html">Comprar Ticket</a>
@@ -79,29 +79,29 @@
                             	<img alt="Foto de perfil" src="<% out.print(foto); %>" id="img-perfil" class="img-fluid rounded-4 " width="40px" data-bs-toggle="modal" data-bs-target="#modal-foto">
 	                        	
 	                        	<!-- Modal -->
-	                            <div class="modal fade" id="modal-foto" tabindex="-1" role="dialog"
-	                                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-	                                <div class="modal-dialog modal-dialog-centered" role="document">
-	                                    <div class="modal-content">
-	                                        <div class="modal-header">
-	                                            <h5 class="modal-title" id="exampleModalLongTitle">Ficha del usuario</h5>
-	                                        </div>
-	                                        <div class="modal-body">
-	                                            <div class="text-center w-100">
-	                                                <img src="<% out.print(foto); %>" style='width:100%;height:20rem;' alt="Foto de perfil" id="perfil"
-	                                                    class="animate__animated animate__zoomIn mb-3">
-	                                            </div>
-	                                            <p>Nombre y apellido: <% out.print(na); %></p>
-	                                            <p>Email: <% out.print(email); %></p>
-	                                            <p>Usted es <% out.print(permisos); %></p>
-	                                        </div>
-	                                        <div class="modal-footer">
-	                                            <button type="button" class="btn btn-secondary"
-	                                                data-bs-dismiss="modal">Cerrar</button>
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                            </div>
+                                    <div class="modal fade" id="modal-foto" tabindex="-1" role="dialog"
+                                         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLongTitle">Ficha del usuario</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="text-center w-100">
+                                                        <img src="<% out.print(foto); %>" style='width:100%;height:20rem;' alt="Foto de perfil" id="perfil"
+                                                             class="animate__animated animate__zoomIn mb-3">
+                                                    </div>
+                                                    <p>Nombre y apellido: <% out.print(na); %></p>
+                                                    <p>Email: <% out.print(email); %></p>
+                                                    <p>Usted es <% out.print(permisos); %></p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a class="btn btn-danger" href="../index.html">Cerrar sesion</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                         	
                         	</li>                        	
                         	
@@ -135,7 +135,7 @@
                                     <div class="texto-carrusel col-xs-12 text-s-center col-lg-6 text-lg-end">
                                         <h2>Conf Bs As</h2>
                                         <p>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra
-                                            comunidad el conocimiento y experiencia de los expertos que est·n creando el
+                                            comunidad el conocimiento y experiencia de los expertos que est√°n creando el
                                             futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes
                                             de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te
                                             esperamos!
@@ -160,7 +160,7 @@
                                     <div class="texto-carrusel col-xs-12 text-s-center col-lg-6 text-lg-end">
                                         <h2>Conf Bs As</h2>
                                         <p>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra
-                                            comunidad el conocimiento y experiencia de los expertos que est·n creando el
+                                            comunidad el conocimiento y experiencia de los expertos que est√°n creando el
                                             futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes
                                             de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te
                                             esperamos!
@@ -186,7 +186,7 @@
                                     <div class="texto-carrusel col-xs-12 text-s-center col-lg-6 text-lg-end">
                                         <h2>Conf Bs As</h2>
                                         <p>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra
-                                            comunidad el conocimiento y experiencia de los expertos que est·n creando el
+                                            comunidad el conocimiento y experiencia de los expertos que est√°n creando el
                                             futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes
                                             de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te
                                             esperamos!
@@ -301,12 +301,12 @@
                 <article class="col-lg bg-dark text-white pt-4">
                     <span class="fs-3 fw-bold">Bs As - Octubre</span>
                     <p class="fs-6">Buenos Aires es la provincia y localidad mas grande del estado de Argentina. En los
-                        Estados Unidos, Honolulu es la mas sureÒa de entre las principales ciudades estadounidenses. Aunque el
-                        nombre de Honolulu se refiere al ·rea urbana en la costa sureste de la isla de Ohau, la ciudad y
+                        Estados Unidos, Honolulu es la mas sure√±a de entre las principales ciudades estadounidenses. Aunque el
+                        nombre de Honolulu se refiere al √°rea urbana en la costa sureste de la isla de Ohau, la ciudad y
                         el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad
                         (aproximadamente 600 km<sup>2</sup> de superficie).
                     </p>
-                    <a href="#" class="btn btn-outline-light mb-4">ConocÈ m·s</a>
+                    <a href="#" class="btn btn-outline-light mb-4">Conoc√© m√°s</a>
 
                 </article>
             </div>
@@ -316,10 +316,10 @@
         <section id="form-oradores" class="container mt-3">
 
             <div class="col-12 text-center">
-                <span class="d-block fs-6">CONVI…RTETE EN UN</span>
+                <span class="d-block fs-6">CONVI√âRTETE EN UN</span>
                 <span class="d-block fw-bold fs-3">ORADOR</span>
-                <P>AnÛtate como orador para dar una <span class="subrayado-punteado">charla ignite</span>. CuÈntanos de
-                    quÈ quieres hablar!</P>
+                <P>An√≥tate como orador para dar una <span class="subrayado-punteado">charla ignite</span>. Cu√©ntanos de
+                    qu√© quieres hablar!</P>
             </div>
 
             <form action="javascript:alert('Formulario enviado con exito');" method="get">
@@ -334,8 +334,8 @@
                 <div class="row">
                     <div class="col-md mb-3">
                         <textarea name="tema" id="tema" rows="5" class="form-control"
-                            placeholder="Sobre quÈ quieres hablar?" required></textarea>
-                        <div class="small text-start mt-2">Recuerda incluir un tÌtulo para tu charla</div>
+                            placeholder="Sobre qu√© quieres hablar?" required></textarea>
+                        <div class="small text-start mt-2">Recuerda incluir un t√≠tulo para tu charla</div>
 
                     </div>
                 </div>
@@ -348,16 +348,16 @@
         </section>
     </main>
 
-    <!-- Pie de p·gina -->
+    <!-- Pie de p√°gina -->
     <footer
         class="d-flex flex-column flex-lg-row justify-content-center align-items-center fw-bold column-gap-4 row-gap-3 py-4">
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta p·gina no se encuentra disponible');">Preguntas frecuentes</a>
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta p·gina no se encuentra disponible');">Cont·ctanos</a>
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta p·gina no se encuentra disponible');">Prensa</a>
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta p·gina no se encuentra disponible');">Conferencias</a>
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta p·gina no se encuentra disponible');">TÈrminos y condiciones</a>
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta p·gina no se encuentra disponible');">Privacidad</a>
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta p·gina no se encuentra disponible');">Estudiantes</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta p√°gina no se encuentra disponible');">Preguntas frecuentes</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta p√°gina no se encuentra disponible');">Cont√°ctanos</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta p√°gina no se encuentra disponible');">Prensa</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta p√°gina no se encuentra disponible');">Conferencias</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta p√°gina no se encuentra disponible');">T√©rminos y condiciones</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta p√°gina no se encuentra disponible');">Privacidad</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta p√°gina no se encuentra disponible');">Estudiantes</a>
         </div>
 
     </footer>
