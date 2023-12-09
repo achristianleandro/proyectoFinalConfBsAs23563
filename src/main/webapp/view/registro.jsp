@@ -70,12 +70,13 @@
                 <!-- Formulario con usuario y pass -->
                 <div>
                     <form action="../controller/addUser.jsp" method="post">
-                        <input type="text" name="nombre" placeholder="nombre" class="form-control mb-3">
-                        <input type="text" name="apellido" placeholder="apellido" class="form-control mb-3">
+                        <input type="text" name="nombre" placeholder="Nombre" class="form-control mb-3">
+                        <input type="text" name="apellido" placeholder="Apellido" class="form-control mb-3">
                         <input type="file" nombre="fotoPerfil" class="form- mb-3">
                         <select name="rol" id="rol" class="form-select mb-3">
-                            <option value="orador">orador</option>
-                            <option value="espectador">espectador</option>
+                            <option value="">Quiero ser...</option>
+                            <option value="orador">Orador</option>
+                            <option value="espectador">Espectador</option>
                         </select>
                         <input type="email" onkeyup="validarUser()" name="user" id="user" class="form-control mb-3" placeholder="Usuario" required>
                         <!-- <input type="password" onkeyup="mostrarFortCant()" name="pass" id="pass" class="form-control mb-3" placeholder="Contraseña" required> -->
