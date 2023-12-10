@@ -17,7 +17,10 @@
 	<div class="container">
 		<div class="text-center fs-3 my-4">Listado de usuarios</div>
 		
-		<button class="btn btn-primary my-3">Agregar usuario</button>
+		
+		<button title="Agregar usuario" class="btn btn-primary my-3" data-bs-toggle='modal' data-bs-target='#addModal'><i class="bi bi-person-plus-fill"></i></button>
+		
+		
 		
 		<table class="table table-striped text-center">
 		  <thead class="table-dark">
@@ -77,7 +80,36 @@
 		
 
 		
-	</div>    
+	</div>  
+	  
+	
+	   <!-- Modal agregar -->
+        <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Usuario</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="../controller/addUsuario.jsp" method="post">
+                            <div class="mb-3 text-center">
+                                <input type="text" class="form-control mb-3" id="nomAdd" name="nomAdd" placeholder="Nombre">
+                                <input type="text" class="form-control mb-3" id="apeAdd" name="apeAdd" placeholder="Apellido"> 
+                                <input type="text" class="form-control mb-3" id="dniAdd" name="dniAdd" placeholder="DNI">
+           						<input type="text" class="form-control mb-3" id="emailAdd" name="emailAdd" placeholder="Usuario">
+                                <input class="form-control" type="password" name="password" id="password">
+                 			 </div>
+                            
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-primary">Agregar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
