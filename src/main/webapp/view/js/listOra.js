@@ -25,7 +25,9 @@ if (updateModal) {
     let idUpd = button.getAttribute('idUpd')
 	let nom = button.getAttribute('nom')    
 	let ape = button.getAttribute('ape')    
-	let email = button.getAttribute('email')    
+	let email = button.getAttribute('email')
+	let etiq = button.getAttribute('etiq')    
+	let etiq2 = button.getAttribute('etiq2')    
     
     // If necessary, you could initiate an Ajax request here
     // and then do the updating in a callback.
@@ -35,6 +37,8 @@ if (updateModal) {
     document.getElementById("nom").value=nom
     document.getElementById("ape").value=ape
     document.getElementById("email").value=email
+    document.getElementById("etiq").value=etiq
+    document.getElementById("etiq2").value=etiq2
 
   })
 }

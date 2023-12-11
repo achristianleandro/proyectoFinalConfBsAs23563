@@ -121,7 +121,7 @@
             </div>
 
         </main>
-
+        
         <!-- Pie de página -->
         <footer
             class="d-flex flex-column flex-lg-row justify-content-center align-items-center fw-bold column-gap-4 row-gap-3 py-4 mt-5 position-absolute bottom-0 vw-100">

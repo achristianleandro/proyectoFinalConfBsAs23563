@@ -9,13 +9,14 @@
 	String dni=request.getParameter("dniAdd");
     String temas=request.getParameter("temasAdd");
     String etiquetas=request.getParameter("etiquetasAdd");
+    String etiquetasDos=request.getParameter("etiquetas2Add");
 	
 	
 	ConexionDB conex=new ConexionDB();
 	Statement st=conex.conectar();
         
 	try{
-		Integer insOk=st.executeUpdate("INSERT INTO oradores (nombre, apellido, email, dni, temas, etiquetas) VALUES ('"+nom+"','"+ape+"','"+email+"',"+dni+",'"+temas+"','"+etiquetas+"') ");
+		Integer insOk=st.executeUpdate("INSERT INTO oradores (nombre, apellido, email, dni, temas, etiquetas, etiquetasDos) VALUES ('"+nom+"','"+ape+"','"+email+"',"+dni+",'"+temas+"','"+etiquetas+"','"+etiquetasDos+"') ");
 		
 		if(insOk==1) {
 			response.sendRedirect("../view/listOra.jsp?mensaje=El%20orador%20se%20creó%20exitosamente");

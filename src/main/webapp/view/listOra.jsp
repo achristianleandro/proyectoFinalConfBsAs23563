@@ -46,7 +46,7 @@
                         <th scope="col">Apellido</th>
                         <th scope="col">Email</th>
                         <th scope="col">Etiqueta</th>
-                        <th scope="col">Etiqueta2</th>
+                        <th scope="col">Etiqueta 2</th>
                         <th scope="col">Operaciones</th>
                     </tr>
                 </thead>
@@ -100,7 +100,7 @@
 
                             out.println("<td>");
                             out.println("<a href='#' title='Borrar orador' data-bs-toggle='modal' data-bs-target='#deleteModal' data-bs-whatever='" + rs.getInt("id") + "'><i class='bi bi-trash-fill'></i></a>");
-                            out.println("<a href='#' title='Modificar orador' data-bs-toggle='modal' data-bs-target='#updateModal' idUpd='" + rs.getInt("id") + "' nom='" + rs.getString("nombre") + "' ape='" + rs.getString("apellido") + "' email='" + rs.getString("email") + "'><i class='bi bi-pencil-fill'></i></a>");
+                            out.println("<a href='#' title='Modificar orador' data-bs-toggle='modal' data-bs-target='#updateModal' idUpd='" + rs.getInt("id") + "' nom='" + rs.getString("nombre") + "' ape='" + rs.getString("apellido") + "' email='" + rs.getString("email") + "' etiq='" + rs.getString("etiquetas") + "' etiq2='" + rs.getString("etiquetasDos") + "'><i class='bi bi-pencil-fill'></i></a>");
                             out.println("</td>");
 
                             out.println("</tr>");
@@ -129,8 +129,9 @@
                                 <input type="text" class="form-control mb-3" id="apeAdd" name="apeAdd" placeholder="Apellido">
                                 <input type="text" class="form-control mb-3" id="emailAdd" name="emailAdd" placeholder="Email">
                                 <input type="text" class="form-control mb-3" id="dniAdd" name="dniAdd" placeholder="DNI">
-                                <input type="text" class="form-control mb-3" id="etiquetasAdd" name="etiquetasAdd" placeholder="Etiquetas">
-                                <textarea rows="4" class="form-control mb-3" id="temasAdd" name="temasAdd" placeholder="Escriba una descripciÃ³n de los temas a tratar"></textarea>
+                                <input type="text" class="form-control mb-3" id="etiquetasAdd" name="etiquetasAdd" placeholder="Etiqueta 1">
+                                <input type="text" class="form-control mb-3" id="etiquetas2Add" name="etiquetas2Add" placeholder="Etiqueta 2">
+                                <textarea rows="4" class="form-control mb-3" id="temasAdd" name="temasAdd" placeholder="Escriba una descripción de los temas a tratar"></textarea>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -153,7 +154,7 @@
                     <div class="modal-body">
                         <form action="../controller/delOrador.jsp" method="post">
                             <div class="mb-3 text-center">
-                                <label for="recipient-name" class="col-form-label">Â¿Desea eliminar el orador?</label>
+                                <label for="recipient-name" class="col-form-label">¿Desea eliminar el orador?</label>
                                 <input type="hidden" class="form-control" id="recipient-name" name="id">
                             </div>
                             <div class="modal-footer">
