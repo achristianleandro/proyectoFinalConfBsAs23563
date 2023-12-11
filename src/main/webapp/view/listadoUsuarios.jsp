@@ -45,7 +45,14 @@
 			Statement st=conex.conectar();
 			
 			//le hago la consulta sql, traigo la tabla usuarios
-			ResultSet rs=st.executeQuery("SELECT * FROM usuarios");
+			String buscar = request.getParameter("buscar");
+            ResultSet rs;
+			
+			if (buscar != null) {
+                rs = st.executeQuery("SELECT * FROM usuarios WHERE nombre LIKE '%" + buscar + "%' OR apellido LIKE '%" + buscar + "%' OR user LIKE '%"+buscar+"%';");
+            } else {
+                rs = st.executeQuery("SELECT * FROM usuarios");
+            }
 			
 			while(rs.next()) {
 				out.println("<tr>");
@@ -71,8 +78,8 @@
 				out.println("</td>");
 				
 				out.println("<td>");
-                out.println("<a href='#' title='Borrar orador' data-bs-toggle='modal' data-bs-target='#deleteModal' data-bs-whatever='" + rs.getInt("id") + "'><i class='bi bi-trash-fill'></i></a>");
-                out.println("<a href='#' title='Modificar orador' data-bs-toggle='modal' data-bs-target='#updateModal' idUpd='" + rs.getInt("id") + "' nom ='" + rs.getString("nombre") + "' ape='" + rs.getString("apellido") + "' usu='" + rs.getString("user") + "'cont'"  rs.getString("pass") "'><i class='bi bi-pencil-fill'></i></a>");
+                out.println("<a href='#' title='Borrar usuario' data-bs-toggle='modal' data-bs-target='#deleteModal' data-bs-whatever='" + rs.getInt("id") + "'><i class='bi bi-trash-fill'></i></a>");
+                out.println("<a href='#' title='Modificar usuario' data-bs-toggle='modal' data-bs-target='#updateModal' idUpd='" + rs.getInt("id") + "' nom ='" + rs.getString("nombre") + "' ape='" + rs.getString("apellido") + "' user='" + rs.getString("user") + "'pass='" + rs.getString("pass") +"'><i class='bi bi-pencil-fill'></i></a>");
                 out.println("</td>");
 
 				out.println("</tr>");
@@ -102,10 +109,9 @@
                             <div class="mb-3 text-center">
                                 <input type="text" class="form-control mb-3" id="nomAdd" name="nomAdd" placeholder="Nombre">
                                 <input type="text" class="form-control mb-3" id="apeAdd" name="apeAdd" placeholder="Apellido"> 
-                                <input type="text" class="form-control mb-3" id="dniAdd" name="dniAdd" placeholder="DNI">
                                 <input type="text" class="form-control mb-3" id="rolAdd" name="rolAdd" placeholder="Rol">
            						<input type="text" class="form-control mb-3" id="usuAdd" name="usuAdd" placeholder="Usuario">
-                                <input class="form-control" type="password" name="password" id="password">                      
+                                <input type="password" class="form-control mb-3" id="passAdd" name="passAdd" placeholder="Contraseña">                      
                  			 </div>
                             
                             <div class="modal-footer">
@@ -129,7 +135,7 @@
                     <div class="modal-body">
                         <form action="../controller/delUsuario.jsp" method="post">
                             <div class="mb-3 text-center">
-                                <label for="recipient-name" class="col-form-label">¿Desea eliminar el orador?</label>
+                                <label for="recipient-name" class="col-form-label">¿Desea eliminar el usuario?</label>
                                 <input type="hidden" class="form-control" id="recipient-name" name="id">
                             </div>
                             <div class="modal-footer">

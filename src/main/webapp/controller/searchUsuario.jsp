@@ -7,7 +7,7 @@
  	ConexionDB conex=new ConexionDB();
 	Statement st=conex.conectar(); 
 	try{
-		st.executeQuery("SELECT * FROM usuarios WHERE nombre LIKE '%"+buscar+"%' OR apellido LIKE '%"+buscar+"%';");
+		st.executeQuery("SELECT * FROM usuarios WHERE nombre LIKE '%"+buscar+"%' OR apellido LIKE '%"+buscar+"%' OR user LIKE '%"+buscar+"%';");
 		response.sendRedirect("../view/listadoUsuarios.jsp?buscar="+buscar);
 	
 	}

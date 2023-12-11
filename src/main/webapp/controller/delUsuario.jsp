@@ -10,7 +10,7 @@
 		Integer deleteOk=st.executeUpdate("DELETE FROM usuarios WHERE id="+id);
 		
 		if(deleteOk==1) {
-			response.sendRedirect("../view/listadousuarios.jsp?mensaje=El%20usuario%20se%20eliminó%20exitosamente");
+			response.sendRedirect("../view/listadoUsuarios.jsp?mensaje=El%20usuario%20se%20eliminó%20exitosamente");
 		} else {
 			response.sendRedirect("../view/listadoUsuarios.jsp?mensaje=El%20usuario%20no%20se%20pudo%20eliminar");
 		}

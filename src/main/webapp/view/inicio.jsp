@@ -8,10 +8,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Conf Bs As</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 </head>
 
 <body class="bg-body-secondary">
@@ -69,7 +75,7 @@
                                 <a class="nav-link" href="#lugar-fecha">El lugar y la fecha</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#form-oradores">Convi√©rtete en orador</a>
+                                <a class="nav-link" href="#form-oradores">ConviÈrtete en orador</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-success" href="../tickets/comprarTicket.html">Comprar Ticket</a>
@@ -97,7 +103,7 @@
                                                     <p>Usted es <% out.print(permisos); %></p>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <a class="btn btn-danger" href="../index.html">Cerrar sesion</a>
+                                                    <a class="btn btn-danger" href="../index.jsp">Cerrar sesion</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -135,7 +141,7 @@
                                     <div class="texto-carrusel col-xs-12 text-s-center col-lg-6 text-lg-end">
                                         <h2>Conf Bs As</h2>
                                         <p>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra
-                                            comunidad el conocimiento y experiencia de los expertos que est√°n creando el
+                                            comunidad el conocimiento y experiencia de los expertos que est·n creando el
                                             futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes
                                             de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te
                                             esperamos!
@@ -160,7 +166,7 @@
                                     <div class="texto-carrusel col-xs-12 text-s-center col-lg-6 text-lg-end">
                                         <h2>Conf Bs As</h2>
                                         <p>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra
-                                            comunidad el conocimiento y experiencia de los expertos que est√°n creando el
+                                            comunidad el conocimiento y experiencia de los expertos que est·n creando el
                                             futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes
                                             de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te
                                             esperamos!
@@ -186,7 +192,7 @@
                                     <div class="texto-carrusel col-xs-12 text-s-center col-lg-6 text-lg-end">
                                         <h2>Conf Bs As</h2>
                                         <p>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra
-                                            comunidad el conocimiento y experiencia de los expertos que est√°n creando el
+                                            comunidad el conocimiento y experiencia de los expertos que est·n creando el
                                             futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes
                                             de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te
                                             esperamos!
@@ -301,12 +307,12 @@
                 <article class="col-lg bg-dark text-white pt-4">
                     <span class="fs-3 fw-bold">Bs As - Octubre</span>
                     <p class="fs-6">Buenos Aires es la provincia y localidad mas grande del estado de Argentina. En los
-                        Estados Unidos, Honolulu es la mas sure√±a de entre las principales ciudades estadounidenses. Aunque el
-                        nombre de Honolulu se refiere al √°rea urbana en la costa sureste de la isla de Ohau, la ciudad y
+                        Estados Unidos, Honolulu es la mas sureÒa de entre las principales ciudades estadounidenses. Aunque el
+                        nombre de Honolulu se refiere al ·rea urbana en la costa sureste de la isla de Ohau, la ciudad y
                         el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad
                         (aproximadamente 600 km<sup>2</sup> de superficie).
                     </p>
-                    <a href="#" class="btn btn-outline-light mb-4">Conoc√© m√°s</a>
+                    <a href="#" class="btn btn-outline-light mb-4">ConocÈ m·s</a>
 
                 </article>
             </div>
@@ -318,8 +324,8 @@
             <div class="col-12 text-center">
                 <span class="d-block fs-6">CONVI√âRTETE EN UN</span>
                 <span class="d-block fw-bold fs-3">ORADOR</span>
-                <P>An√≥tate como orador para dar una <span class="subrayado-punteado">charla ignite</span>. Cu√©ntanos de
-                    qu√© quieres hablar!</P>
+                <P>AnÛtate como orador para dar una <span class="subrayado-punteado">charla ignite</span>. CuÈntanos de
+                    quÈ quieres hablar!</P>
             </div>
 
             <form action="javascript:alert('Formulario enviado con exito');" method="get">
@@ -334,8 +340,8 @@
                 <div class="row">
                     <div class="col-md mb-3">
                         <textarea name="tema" id="tema" rows="5" class="form-control"
-                            placeholder="Sobre qu√© quieres hablar?" required></textarea>
-                        <div class="small text-start mt-2">Recuerda incluir un t√≠tulo para tu charla</div>
+                            placeholder="Sobre quÈ quieres hablar?" required></textarea>
+                        <div class="small text-start mt-2">Recuerda incluir un tÌtulo para tu charla</div>
 
                     </div>
                 </div>
@@ -348,16 +354,16 @@
         </section>
     </main>
 
-    <!-- Pie de p√°gina -->
+    <!-- Pie de p·gina -->
     <footer
         class="d-flex flex-column flex-lg-row justify-content-center align-items-center fw-bold column-gap-4 row-gap-3 py-4">
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta p√°gina no se encuentra disponible');">Preguntas frecuentes</a>
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta p√°gina no se encuentra disponible');">Cont√°ctanos</a>
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta p√°gina no se encuentra disponible');">Prensa</a>
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta p√°gina no se encuentra disponible');">Conferencias</a>
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta p√°gina no se encuentra disponible');">T√©rminos y condiciones</a>
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta p√°gina no se encuentra disponible');">Privacidad</a>
-        <a class="link-light text-decoration-none" href="javascript:alert('Esta p√°gina no se encuentra disponible');">Estudiantes</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta p·gina no se encuentra disponible');">Preguntas frecuentes</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta p·gina no se encuentra disponible');">Cont·ctanos</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta p·gina no se encuentra disponible');">Prensa</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta p·gina no se encuentra disponible');">Conferencias</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta p·gina no se encuentra disponible');">TÈrminos y condiciones</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta p·gina no se encuentra disponible');">Privacidad</a>
+        <a class="link-light text-decoration-none" href="javascript:alert('Esta p·gina no se encuentra disponible');">Estudiantes</a>
         </div>
 
     </footer>

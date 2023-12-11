@@ -20,7 +20,7 @@
             <div class="text-center fs-3 my-4">Listado de oradores</div>
 
             <%
-                String mensaje = request.getParameter("mensaje");
+            	String mensaje = request.getParameter("mensaje");
                 if (mensaje != null) {
 
                     /*Mensaje mostrado por alert*/
@@ -63,7 +63,7 @@
                         ResultSet rs;
 
                         if (buscar != null) {
-                            rs = st.executeQuery("SELECT * FROM oradores WHERE nombre LIKE '%" + buscar + "%' OR apellido LIKE '%" + buscar + "%';");
+                            rs = st.executeQuery("SELECT * FROM oradores WHERE nombre LIKE '%" + buscar + "%' OR apellido LIKE '%" + buscar + "%' OR email LIKE '%"+buscar+"%';");
                         } else {
                             rs = st.executeQuery("SELECT * FROM oradores");
                         }

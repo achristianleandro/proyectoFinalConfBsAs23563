@@ -7,7 +7,7 @@
  	ConexionDB conex=new ConexionDB();
 	Statement st=conex.conectar(); 
 	try{
-		st.executeQuery("SELECT * FROM oradores WHERE nombre LIKE '%"+buscar+"%' OR apellido LIKE '%"+buscar+"%';");
+		st.executeQuery("SELECT * FROM oradores WHERE nombre LIKE '%"+buscar+"%' OR apellido LIKE '%"+buscar+"%' OR email LIKE '%"+buscar+"%';");
 		response.sendRedirect("../view/listOra.jsp?buscar="+buscar);
 	
 	}

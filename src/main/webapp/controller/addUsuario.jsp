@@ -5,10 +5,9 @@
 <% 
 	String nom=request.getParameter("nomAdd");
 	String ape=request.getParameter("apeAdd");
-	String dni=request.getParameter("dniAdd");
 	String rol=request.getParameter("rolAdd");
 	String usu=request.getParameter("usuAdd");
-	String cont=request.getParameter("password");
+	String pass=request.getParameter("passAdd");
 	
 	
 	
@@ -16,7 +15,7 @@
 	Statement st=conex.conectar();
         
 	try{
-		Integer insOk=st.executeUpdate("INSERT INTO usuarios (nombre, apellido, dni, rol, user, pass) VALUES ('"+nom+"','"+ape+"','"+dni+"','"+rol+"','"+usu+"','"+cont+"') ");
+		Integer insOk=st.executeUpdate("INSERT INTO usuarios (nombre, apellido, rol, user, pass) VALUES ('"+nom+"','"+ape+"','"+rol+"','"+usu+"','"+pass+"') ");
 		
 		if(insOk==1) {
 			response.sendRedirect("../view/listadoUsuarios.jsp?mensaje=El%20usuario%20se%20creó%20exitosamente");

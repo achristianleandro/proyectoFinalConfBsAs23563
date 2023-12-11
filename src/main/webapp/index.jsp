@@ -8,10 +8,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Conf Bs As</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-              integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
         <link rel="stylesheet" href="css/style.css">
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	
+	    <link rel="preconnect" href="https://fonts.googleapis.com">
+	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	
+	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+	        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     </head>
 
     <body class="bg-body-secondary">
@@ -71,7 +77,7 @@
                                     <a class="nav-link text-success" href="tickets/comprarTicket.html">Comprar Ticket</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-item fw-bold btn btn-primary" href="view/login.jsp"><i class="bi bi-door-open-fill"></i> Acceder</a>
+                                    <a class="nav-item fw-bold btn btn-primary" title="Acceder" href="view/login.jsp"><i class="bi bi-door-open-fill"></i></a>
                                 </li>
                             </ul>
                         </span>
@@ -316,7 +322,7 @@
             </section>
         </main>
 
-        <!-- Pie de pï¿½gina -->
+        <!-- Pie de página -->
         <footer
             class="d-flex flex-column flex-lg-row justify-content-center align-items-center fw-bold column-gap-4 row-gap-3 py-4">
             <a class="link-light text-decoration-none" href="javascript:alert('Esta página no se encuentra disponible');">Preguntas frecuentes</a>

@@ -11,7 +11,7 @@
     String repPass = request.getParameter("repPass");
     String nombre = request.getParameter("nombre");
     String apellido = request.getParameter("apellido");
-    //String fotoPerfil = request.getParameter("fotoPerfil");
+    String fotoPerfil = request.getParameter("fotoPerfil");
     String rol = request.getParameter("rol");
 
     //TODO: comprobar que pass==repPass
@@ -20,10 +20,10 @@
     ConexionDB conex = new ConexionDB();
     Statement st = conex.conectar();
     try {
-        Integer insOk = st.executeUpdate("INSERT INTO usuarios (nombre, apellido, rol, user, pass) VALUES ('" + nombre + "','" + apellido + "','" + rol + "','" + user + "','" + pass + "')");
+        Integer insOk = st.executeUpdate("INSERT INTO usuarios (nombre, apellido, rol, user, pass, fotoPerfil) VALUES ('" + nombre + "','" + apellido + "','" + rol + "','" + user + "','" + pass + "','"+fotoPerfil+"')");
 
         if (insOk == 1) {
-            response.sendRedirect("../view/login.jsp?mensaje=El%20usuario%20se%20creÃ³%20exitosamente");
+            response.sendRedirect("../view/login.jsp?mensaje=El%20usuario%20se%20creó%20exitosamente");
         } else {
             response.sendRedirect("../view/registro.jsp?mensaje=Error%20al%20crear%20el%20usuario");
         }
