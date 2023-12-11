@@ -97,8 +97,9 @@
                                 <input type="text" class="form-control mb-3" id="nomAdd" name="nomAdd" placeholder="Nombre">
                                 <input type="text" class="form-control mb-3" id="apeAdd" name="apeAdd" placeholder="Apellido"> 
                                 <input type="text" class="form-control mb-3" id="dniAdd" name="dniAdd" placeholder="DNI">
-           						<input type="text" class="form-control mb-3" id="emailAdd" name="emailAdd" placeholder="Usuario">
-                                <input class="form-control" type="password" name="password" id="password">
+                                <input type="text" class="form-control mb-3" id="rolAdd" name="rolAdd" placeholder="Rol">
+           						<input type="text" class="form-control mb-3" id="usuAdd" name="usuAdd" placeholder="Usuario">
+                                <input class="form-control" type="password" name="password" id="password">                      
                  			 </div>
                             
                             <div class="modal-footer">
