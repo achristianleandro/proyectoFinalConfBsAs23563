@@ -30,6 +30,7 @@
 		      <th scope="col">Apellido</th>
 		      <th scope="col">Usuario</th>
 		      <th scope="col">Contraseña</th>
+		      <th scope="col">Operaciones</th>
 		    </tr>
 		  </thead>
 		  <tbody>
@@ -68,6 +69,11 @@
 				out.println("<td>");
 				out.println(rs.getString("pass"));
 				out.println("</td>");
+				
+				out.println("<td>");
+                out.println("<a href='#' title='Borrar orador' data-bs-toggle='modal' data-bs-target='#deleteModal' data-bs-whatever='" + rs.getInt("id") + "'><i class='bi bi-trash-fill'></i></a>");
+                out.println("<a href='#' title='Modificar orador' data-bs-toggle='modal' data-bs-target='#updateModal' idUpd='" + rs.getInt("id") + "' nom ='" + rs.getString("nombre") + "' ape='" + rs.getString("apellido") + "' usu='" + rs.getString("user") + "'cont'"  rs.getString("pass") "'><i class='bi bi-pencil-fill'></i></a>");
+                out.println("</td>");
 
 				out.println("</tr>");
 				
@@ -112,7 +118,67 @@
             </div>
         </div>
 
+    <!-- Modal borrar -->
+        <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar Usuario</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="../controller/delUsuario.jsp" method="post">
+                            <div class="mb-3 text-center">
+                                <label for="recipient-name" class="col-form-label">¿Desea eliminar el orador?</label>
+                                <input type="hidden" class="form-control" id="recipient-name" name="id">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-primary">Eliminar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Modal modificar -->
+        <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modificar Usuario</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="../controller/updUsuario.jsp" method="post">
+                            <div class="mb-3 text-start">
+                                <input type="hidden" class="form-control mb-3" id="idUpd" name=idUpd>
+                                <span>Nombre:</span>
+                                <input type="text" class="form-control mb-3" id="nom" name="nom">
+                                <span>Apellido:</span>
+                                <input type="text" class="form-control mb-3" id="ape" name="ape">
+                                <span>Usuario:</span>
+                                <input type="text" class="form-control mb-3" id="user" name="user">
+                                <span>Contraseña:</span>
+                                <input type="text" class="form-control mb-3" id="pass" name="pass">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-primary">Modificar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        
+        
+        
+        
+        <script src="js/listUsu.js"></script>
+        
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
 </html>
