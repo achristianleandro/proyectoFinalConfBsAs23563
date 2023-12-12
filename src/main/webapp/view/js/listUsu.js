@@ -40,3 +40,28 @@ if (updateModal) {
 
   })
 }
+
+const permisoUsuOraModal = document.getElementById('permisoUsuOraModal')
+if (permisoUsuOraModal) {
+  permisoUsuOraModal.addEventListener('show.bs.modal', event => {
+    // Button that triggered the modal
+    const button = event.relatedTarget
+    // Extract info from data-bs-* attributes
+    let idUsuOra = button.getAttribute('idUsuOra')
+	let nomUsuOra = button.getAttribute('nomUsuOra')    
+	let apeUsuOra = button.getAttribute('apeUsuOra') 
+	let emailUsuOra = button.getAttribute('emailUsuOra')  
+	let fotoUsuOra = button.getAttribute('fotoUsuOra')         
+    
+    // If necessary, you could initiate an Ajax request here
+    // and then do the updating in a callback.
+
+    // Update the modal's content.
+    document.getElementById("idUsuOra").value=idUsuOra
+    document.getElementById("nomUsuOra").value=nomUsuOra
+    document.getElementById("apeUsuOra").value=apeUsuOra
+    document.getElementById("emailUsuOra").value=emailUsuOra
+    document.getElementById("fotoUsuOra").value=fotoUsuOra
+
+  })
+}

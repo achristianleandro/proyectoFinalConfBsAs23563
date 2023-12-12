@@ -6,6 +6,7 @@
 	String nom=request.getParameter("nomAdd");
 	String ape=request.getParameter("apeAdd");
 	String email=request.getParameter("emailAdd");
+	String foto=request.getParameter("fotoAdd");
 	String dni=request.getParameter("dniAdd");
     String temas=request.getParameter("temasAdd");
     String etiquetas=request.getParameter("etiquetasAdd");
@@ -16,7 +17,7 @@
 	Statement st=conex.conectar();
         
 	try{
-		Integer insOk=st.executeUpdate("INSERT INTO oradores (nombre, apellido, email, dni, temas, etiquetas, etiquetasDos) VALUES ('"+nom+"','"+ape+"','"+email+"',"+dni+",'"+temas+"','"+etiquetas+"','"+etiquetasDos+"') ");
+		Integer insOk=st.executeUpdate("INSERT INTO oradores (nombre, apellido, email, fotoPerfil, dni, temas, etiquetas, etiquetasDos) VALUES ('"+nom+"','"+ape+"','"+email+"','"+foto+"',"+dni+",'"+temas+"','"+etiquetas+"','"+etiquetasDos+"') ");
 		
 		if(insOk==1) {
 			response.sendRedirect("../view/listOra.jsp?mensaje=El%20orador%20se%20creó%20exitosamente");

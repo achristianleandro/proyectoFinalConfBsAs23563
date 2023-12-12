@@ -29,7 +29,8 @@
 		      <th scope="col">Nombre</th>
 		      <th scope="col">Apellido</th>
 		      <th scope="col">Usuario</th>
-		      <th scope="col">ContraseÃ±a</th>
+		      <th scope="col">Contraseña</th>
+		      <th scope="col">Rol</th>
 		      <th scope="col">Operaciones</th>
 		    </tr>
 		  </thead>
@@ -78,11 +79,14 @@
 				out.println("</td>");
 				
 				out.println("<td>");
+				out.println(rs.getString("rol"));
+				out.println("</td>");
+				
+				out.println("<td>");
                 out.println("<a href='#' title='Borrar usuario' data-bs-toggle='modal' data-bs-target='#deleteModal' data-bs-whatever='" + rs.getInt("id") + "'><i class='bi bi-trash-fill'></i></a>");
                 out.println("<a href='#' title='Modificar usuario' data-bs-toggle='modal' data-bs-target='#updateModal' idUpd='" + rs.getInt("id") + "' nom ='" + rs.getString("nombre") + "' ape='" + rs.getString("apellido") + "' user='" + rs.getString("user") + "'pass='" + rs.getString("pass") +"'><i class='bi bi-pencil-fill'></i></a>");
                 
-                if(rs.getString("rol").equals("orador (pendiente de aprobacion)")){
-                	
+                if(rs.getString("rol").equals("orador (pendiente de aprobación)")){
                 	out.println("<a href='#' title='Permisos de orador' data-bs-toggle='modal' data-bs-target='#permisoUsuOraModal' idUsuOra='" + rs.getInt("id") + "' nomUsuOra ='" + rs.getString("nombre") + "' apeUsuOra='" + rs.getString("apellido") + "' emailUsuOra='" + rs.getString("user") + "' fotoUsuOra='" + rs.getString("fotoPerfil") +"'><i class='bi bi-node-plus-fill'></i></a>");
                 }
                 out.println("</td>");
@@ -123,7 +127,7 @@
 								</select>
 								  
            						<input type="text" class="form-control mb-3" id="usuAdd" name="usuAdd" placeholder="Usuario" required>
-                                <input type="password" class="form-control mb-3" id="passAdd" name="passAdd" placeholder="ContraseÃ±a" required>                      
+                                <input type="password" class="form-control mb-3" id="passAdd" name="passAdd" placeholder="Contraseña" required>                      
                  			 </div>
                             
                             <div class="modal-footer">
@@ -147,7 +151,7 @@
                     <div class="modal-body">
                         <form action="../controller/delUsuario.jsp" method="post">
                             <div class="mb-3 text-center">
-                                <label for="recipient-name" class="col-form-label">Â¿Desea eliminar el usuario?</label>
+                                <label for="recipient-name" class="col-form-label">¿Desea eliminar el usuario?</label>
                                 <input type="hidden" class="form-control" id="recipient-name" name="id">
                             </div>
                             <div class="modal-footer">
@@ -178,7 +182,7 @@
                                 <input type="text" class="form-control mb-3" id="ape" name="ape">
                                 <span>Usuario:</span>
                                 <input type="text" class="form-control mb-3" id="user" name="user">
-                                <span>ContraseÃ±a:</span>
+                                <span>Contraseña:</span>
                                 <input type="text" class="form-control mb-3" id="pass" name="pass">
                             </div>
                             <div class="modal-footer">
@@ -202,7 +206,7 @@
                     <div class="modal-body">
                         <form action="../controller/updUsuOra.jsp" method="post">
                             <div class="mb-3 text-center">
-                                <label for="recipient-name" class="col-form-label">Â¿Desea otorgarle permisos de orador al usuario?</label>
+                                <label for="recipient-name" class="col-form-label">¿Desea otorgarle permisos de orador al usuario?</label>
                                 <input type="hidden" class="form-control" id="idUsuOra" name="idUsuOra">
                                 <input type="hidden" class="form-control mb-3" id="nomUsuOra" name="nomUsuOra" placeholder="Nombre">
                                 <input type="hidden" class="form-control mb-3" id="apeUsuOra" name="apeUsuOra" placeholder="Apellido">

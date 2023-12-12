@@ -47,6 +47,7 @@
                         <th scope="col">Email</th>
                         <th scope="col">Etiqueta</th>
                         <th scope="col">Etiqueta 2</th>
+                        <th scope="col">Temas</th>
                         <th scope="col">Operaciones</th>
                     </tr>
                 </thead>
@@ -97,10 +98,14 @@
                             out.println("<td>");
                             out.println(rs.getString("etiquetasDos"));
                             out.println("</td>");
+                            
+                            out.println("<td>");
+                            out.println(rs.getString("temas"));
+                            out.println("</td>");
 
                             out.println("<td>");
                             out.println("<a href='#' title='Borrar orador' data-bs-toggle='modal' data-bs-target='#deleteModal' data-bs-whatever='" + rs.getInt("id") + "'><i class='bi bi-trash-fill'></i></a>");
-                            out.println("<a href='#' title='Modificar orador' data-bs-toggle='modal' data-bs-target='#updateModal' idUpd='" + rs.getInt("id") + "' nom='" + rs.getString("nombre") + "' ape='" + rs.getString("apellido") + "' email='" + rs.getString("email") + "' etiq='" + rs.getString("etiquetas") + "' etiq2='" + rs.getString("etiquetasDos") + "'><i class='bi bi-pencil-fill'></i></a>");
+                            out.println("<a href='#' title='Modificar orador' data-bs-toggle='modal' data-bs-target='#updateModal' idUpd='" + rs.getInt("id") + "' nom='" + rs.getString("nombre") + "' ape='" + rs.getString("apellido") + "' email='" + rs.getString("email") + "' foto='" + rs.getString("fotoPerfil") + "' etiq='" + rs.getString("etiquetas") + "' etiq2='" + rs.getString("etiquetasDos") + "' temas='" + rs.getString("temas") + "'><i class='bi bi-pencil-fill'></i></a>");
                             out.println("</td>");
 
                             out.println("</tr>");
@@ -128,6 +133,7 @@
                                 <input type="text" class="form-control mb-3" id="nomAdd" name="nomAdd" placeholder="Nombre">
                                 <input type="text" class="form-control mb-3" id="apeAdd" name="apeAdd" placeholder="Apellido">
                                 <input type="text" class="form-control mb-3" id="emailAdd" name="emailAdd" placeholder="Email">
+                                <input type="text" class="form-control mb-3" id="fotoAdd" name="fotoAdd" placeholder="URL de la foto">
                                 <input type="text" class="form-control mb-3" id="dniAdd" name="dniAdd" placeholder="DNI">
                                 <input type="text" class="form-control mb-3" id="etiquetasAdd" name="etiquetasAdd" placeholder="Etiqueta 1">
                                 <input type="text" class="form-control mb-3" id="etiquetas2Add" name="etiquetas2Add" placeholder="Etiqueta 2">
@@ -185,10 +191,14 @@
                                 <input type="text" class="form-control mb-3" id="ape" name="ape">
                                 <span>Email:</span>
                                 <input type="text" class="form-control mb-3" id="email" name="email">
+                                <span>Foto:</span>
+                                <input type="text" class="form-control mb-3" id="foto" name="foto">
                                 <span>Etiqueta:</span>
                                 <input type="text" class="form-control mb-3" id="etiq" name="etiq">
                                 <span>Etiqueta2:</span>
                                 <input type="text" class="form-control mb-3" id="etiq2" name="etiq2">
+                                <span>Temas:</span>
+                                <textarea rows="4" class="form-control mb-3" id="temas" name="temas" placeholder="Escriba una descripción de los temas a tratar"></textarea>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>

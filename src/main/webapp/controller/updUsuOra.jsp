@@ -3,6 +3,7 @@
 <%@page import="db.ConexionDB"%>
 
 <% 
+	String idUsuOra=request.getParameter("idUsuOra");
 	String nomUsuOra=request.getParameter("nomUsuOra");
 	String apeUsuOra=request.getParameter("apeUsuOra");
 	String emailUsuOra=request.getParameter("emailUsuOra");
@@ -12,10 +13,11 @@
 	Statement st=conex.conectar();
         
 	try{
+		st.executeUpdate("UPDATE usuarios SET rol='orador' WHERE id="+idUsuOra);
 		Integer insOk=st.executeUpdate("INSERT INTO oradores (nombre, apellido, email, fotoPerfil) VALUES ('"+nomUsuOra+"','"+apeUsuOra+"','"+emailUsuOra+"','"+fotoUsuOra+"') ");
 		
 		if(insOk==1) {
-			response.sendRedirect("../view/listOra.jsp?mensaje=El%20orador%20se%20creÃ³%20exitosamente");
+			response.sendRedirect("../view/listOra.jsp?mensaje=El%20orador%20se%20creó%20exitosamente");
 		} else {
 			response.sendRedirect("../view/listOra.jsp?mensaje=Error%20al%20crear%20el%20orador");		
 		}

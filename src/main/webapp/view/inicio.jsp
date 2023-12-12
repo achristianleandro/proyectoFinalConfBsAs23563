@@ -101,6 +101,37 @@
                                                     <p>Nombre y apellido: <% out.print(na); %></p>
                                                     <p>Email: <% out.print(email); %></p>
                                                     <p>Usted es <% out.print(permisos); %></p>
+                                                    
+                                                    <%
+                                                    if(permisos.equals("orador")){
+                                                    %>
+                                                    	<p class="d-inline-flex gap-1">
+														  
+														  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+														    Gestionar cuenta
+														  </button>
+														</p>
+														<div class="collapse" id="collapseExample">
+														  <div class="card card-body">
+																<form action="../controller/updEtiqTemasModal.jsp" method="post">
+			                                                        <div class="mb-3 text-center">
+			                                                        	<input type="hidden" class="form-control mb-3" id="idModal" name="idModal" value="<% out.print(id); %>" placeholder="idModal">
+			                                                        	<input type="hidden" class="form-control mb-3" id="emailModal" name="emailModal" value="<% out.print(email); %>" placeholder="Email">
+			                                                            <input type="text" class="form-control mb-3" id="etiquetasModal" name="etiquetasModal" placeholder="Etiqueta 1">
+			                                                            <input type="text" class="form-control mb-3" id="etiquetas2Modal" name="etiquetas2Modal" placeholder="Etiqueta 2">
+			                                                            <textarea rows="4" class="form-control mb-3" id="temasModal" name="temasModal" placeholder="Escriba una descripción de los temas a tratar"></textarea>
+			                                                        </div>
+			                                                        <div class="modal-footer">
+			                                                            <button type="submit" class="btn btn-primary">Agregar</button>
+			                                                        </div>
+			                                                    </form>
+														  </div>
+														</div>
+	                                                    
+	                                                <%
+                                                    }                                                    
+                                                    %>
+                                                    
                                                 </div>
                                                 <div class="modal-footer">
                                                     <a class="btn btn-danger" href="../index.jsp">Cerrar sesion</a>
@@ -326,7 +357,7 @@
         <section id="form-oradores" class="container mt-3">
 
             <div class="col-12 text-center">
-                <span class="d-block fs-6">CONVIÃ‰RTETE EN UN</span>
+                <span class="d-block fs-6">CONVIÉ‰RTETE EN UN</span>
                 <span class="d-block fw-bold fs-3">ORADOR</span>
                 <P>Anótate como orador para dar una <span class="subrayado-punteado">charla ignite</span>. Cuéntanos de
                     qué quieres hablar!</P>
