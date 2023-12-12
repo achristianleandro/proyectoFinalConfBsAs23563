@@ -17,8 +17,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 </head>
 
-<body class="bg-body-secondary position-relative pb-5">
-        <!-- Barra de navegación -->
+<body class="bg-body-secondary position-relative pb-5" style="position: relative; padding-bottom: 3em; min-height: 100vh;">
+        <!-- Barra de navegaciÃ³n -->
         <header>
 
             <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
@@ -51,7 +51,7 @@
                                     <a class="nav-link" href="#lugar-fecha">El lugar y la fecha</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#form-oradores">Conviértete en orador</a>
+                                    <a class="nav-link" href="#form-oradores">ConviÃ©rtete en orador</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-success" href="tickets/comprarTicket.html">Comprar Ticket</a>
@@ -79,9 +79,9 @@
                             <option value="espectador">Espectador</option>
                         </select>
                         <input type="email" onkeyup="validarUser()" name="user" id="user" class="form-control mb-3" placeholder="Usuario" required>
-                        <!-- <input type="password" onkeyup="mostrarFortCant()" name="pass" id="pass" class="form-control mb-3" placeholder="Contraseña" required> -->
+                        <!-- <input type="password" onkeyup="mostrarFortCant()" name="pass" id="pass" class="form-control mb-3" placeholder="ContraseÃ±a" required> -->
                         <div class="input-group mb-3">
-                            <input type="password" id="pass" name="pass" onkeyup="validarPassDiscriminada()" class="form-control" placeholder="Constraseña" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="password" id="pass" name="pass" onkeyup="validarPassDiscriminada()" class="form-control" placeholder="ConstraseÃ±a" aria-label="Username" aria-describedby="basic-addon1">
                             <span class="input-group-text" id="basic-addon1">
                                 <a href="#">
                                     <i class="bi bi-eye-slash-fill" id="icono" onclick="mostrarPass()"></i>
@@ -90,9 +90,9 @@
                         </div>
 
                         <div class="input-group mb-3">
-                            <!-- 	                	<input type="password" name="repPass" id="repPass" onkeyup="passIguales()" class="form-control" placeholder="Reingrese la constraseña" required> -->
+                            <!-- 	                	<input type="password" name="repPass" id="repPass" onkeyup="passIguales()" class="form-control" placeholder="Reingrese la constraseÃ±a" required> -->
 
-                            <input type="password" name="repPassII" id="repPassII" onkeyup="passIgualesII()" class="form-control" placeholder="Reingrese la constraseña" required>
+                            <input type="password" name="repPassII" id="repPassII" onkeyup="passIgualesII()" class="form-control" placeholder="Reingrese la constraseÃ±a" required>
                             <span class="input-group-text" id="basic-addon1">
                                 <a href="#">
                                     <!-- 	                            <i class="bi bi-eye-slash-fill" id="icono2" onclick="mostrarRepPass()"></i> -->
@@ -122,16 +122,15 @@
 
         </main>
         
-        <!-- Pie de página -->
-        <footer
-            class="d-flex flex-column flex-lg-row justify-content-center align-items-center fw-bold column-gap-4 row-gap-3 py-4 mt-5 position-absolute bottom-0 vw-100">
-            <a class="link-light text-decoration-none" href="javascript:alert('Esta página no se encuentra disponible');">Preguntas frecuentes</a>
-            <a class="link-light text-decoration-none" href="javascript:alert('Esta página no se encuentra disponible');">Contáctanos</a>
-            <a class="link-light text-decoration-none" href="javascript:alert('Esta página no se encuentra disponible');">Prensa</a>
-            <a class="link-light text-decoration-none" href="javascript:alert('Esta página no se encuentra disponible');">Conferencias</a>
-            <a class="link-light text-decoration-none" href="javascript:alert('Esta página no se encuentra disponible');">Términos y condiciones</a>
-            <a class="link-light text-decoration-none" href="javascript:alert('Esta página no se encuentra disponible');">Privacidad</a>
-            <a class="link-light text-decoration-none" href="javascript:alert('Esta página no se encuentra disponible');">Estudiantes</a>
+        <!-- Pie de pÃ¡gina -->
+        <footer class="d-flex flex-column flex-lg-row justify-content-center align-items-center fw-bold column-gap-4 row-gap-3 py-4 mt-5 position-absolute bottom-0 vw-100" style="position: absolute; bottom: 0; width: 100%;">
+            <a class="link-light text-decoration-none" href="javascript:alert('Esta pÃ¡gina no se encuentra disponible');">Preguntas frecuentes</a>
+            <a class="link-light text-decoration-none" href="javascript:alert('Esta pÃ¡gina no se encuentra disponible');">ContÃ¡ctanos</a>
+            <a class="link-light text-decoration-none" href="javascript:alert('Esta pÃ¡gina no se encuentra disponible');">Prensa</a>
+            <a class="link-light text-decoration-none" href="javascript:alert('Esta pÃ¡gina no se encuentra disponible');">Conferencias</a>
+            <a class="link-light text-decoration-none" href="javascript:alert('Esta pÃ¡gina no se encuentra disponible');">TÃ©rminos y condiciones</a>
+            <a class="link-light text-decoration-none" href="javascript:alert('Esta pÃ¡gina no se encuentra disponible');">Privacidad</a>
+            <a class="link-light text-decoration-none" href="javascript:alert('Esta pÃ¡gina no se encuentra disponible');">Estudiantes</a>
 
         </footer>
 
