@@ -109,7 +109,14 @@
                             <div class="mb-3 text-center">
                                 <input type="text" class="form-control mb-3" id="nomAdd" name="nomAdd" placeholder="Nombre">
                                 <input type="text" class="form-control mb-3" id="apeAdd" name="apeAdd" placeholder="Apellido"> 
-                                <input type="text" class="form-control mb-3" id="rolAdd" name="rolAdd" placeholder="Rol">
+                                   
+                               <select class="form-select mb-3" aria-label="Default select example">
+  									<option selected>Eligir un rol</option>
+ 									<option value="1">Orador</option>
+  									<option value="2">Espectador</option>
+  									<option value="3">admi</option>
+								</select>
+								  
            						<input type="text" class="form-control mb-3" id="usuAdd" name="usuAdd" placeholder="Usuario">
                                 <input type="password" class="form-control mb-3" id="passAdd" name="passAdd" placeholder="Contraseña">                      
                  			 </div>
