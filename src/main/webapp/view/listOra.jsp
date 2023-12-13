@@ -46,7 +46,7 @@
                         <th scope="col">Apellido</th>
                         <th scope="col">Email</th>
                         <th scope="col">Etiqueta</th>
-                        <th scope="col">Etiqueta 2</th>
+                        <th scope="col">Etiqueta2</th>
                         <th scope="col">Temas</th>
                         <th scope="col">Operaciones</th>
                     </tr>
