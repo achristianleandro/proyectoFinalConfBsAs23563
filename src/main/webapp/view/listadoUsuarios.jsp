@@ -119,7 +119,7 @@
                                 <input type="text" class="form-control mb-3" id="nomAdd" name="nomAdd" placeholder="Nombre">
                                 <input type="text" class="form-control mb-3" id="apeAdd" name="apeAdd" placeholder="Apellido"> 
                                    
-                               <select class="form-select mb-3" aria-label="Default select example" required>
+                               <select id="rolAdd" name="rolAdd" class="form-select mb-3" aria-label="Default select example" required>
   									<option value="" disabled selected>Elegir un rol</option>
  									<option value="orador">Orador</option>
   									<option value="espectador">Espectador</option>
