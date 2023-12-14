@@ -3,6 +3,7 @@
 <%@page import="db.ConexionDB"%>
 <% 
 	String idUpd=request.getParameter("idUpd");
+	String rolUpd=request.getParameter("rolUpd");
 	String nom=request.getParameter("nom");
 	String ape=request.getParameter("ape");
 	String rol=request.getParameter("rol");
@@ -12,7 +13,7 @@
 	ConexionDB conex=new ConexionDB();
 	Statement st=conex.conectar();
 	try{
-		Integer updateOk=st.executeUpdate("UPDATE usuarios SET nombre='"+nom+"', apellido='"+ape+"', rol='"+rol+"', user='"+usu+"', pass='"+cont+"' WHERE id="+idUpd);
+		Integer updateOk=st.executeUpdate("UPDATE usuarios SET nombre='"+nom+"', apellido='"+ape+"', rol='"+rolUpd+"', user='"+usu+"', pass='"+cont+"' WHERE id="+idUpd);
 		
 		if(updateOk==1) {
 			response.sendRedirect("../view/listadoUsuarios.jsp?mensaje=El%20usuario%20se%20modificó%20exitosamente");

@@ -23,6 +23,7 @@ if (updateModal) {
     const button = event.relatedTarget
     // Extract info from data-bs-* attributes
     let idUpd = button.getAttribute('idUpd')
+    let rolUpd = button.getAttribute('rolUpd')
 	let nom = button.getAttribute('nom')    
 	let ape = button.getAttribute('ape') 
 	let usu = button.getAttribute('user')  
@@ -33,6 +34,7 @@ if (updateModal) {
 
     // Update the modal's content.
     document.getElementById("idUpd").value=idUpd
+    document.getElementById("rolUpd").value=rolUpd
     document.getElementById("nom").value=nom
     document.getElementById("ape").value=ape
     document.getElementById("user").value=usu

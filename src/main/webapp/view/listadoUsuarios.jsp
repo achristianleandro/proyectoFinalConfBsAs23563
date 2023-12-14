@@ -84,7 +84,7 @@
 				
 				out.println("<td>");
                 out.println("<a href='#' title='Borrar usuario' data-bs-toggle='modal' data-bs-target='#deleteModal' data-bs-whatever='" + rs.getInt("id") + "'><i class='bi bi-trash-fill'></i></a>");
-                out.println("<a href='#' title='Modificar usuario' data-bs-toggle='modal' data-bs-target='#updateModal' idUpd='" + rs.getInt("id") + "' nom ='" + rs.getString("nombre") + "' ape='" + rs.getString("apellido") + "' user='" + rs.getString("user") + "'pass='" + rs.getString("pass") +"'><i class='bi bi-pencil-fill'></i></a>");
+                out.println("<a href='#' title='Modificar usuario' data-bs-toggle='modal' data-bs-target='#updateModal' idUpd='" + rs.getInt("id") + "' rolUpd='" + rs.getString("rol") + "' nom ='" + rs.getString("nombre") + "' ape='" + rs.getString("apellido") + "' user='" + rs.getString("user") + "'pass='" + rs.getString("pass") +"'><i class='bi bi-pencil-fill'></i></a>");
                 
                 if(rs.getString("rol").equals("orador (pendiente de aprobación)")){
                 	out.println("<a href='#' title='Permisos de orador' data-bs-toggle='modal' data-bs-target='#permisoUsuOraModal' idUsuOra='" + rs.getInt("id") + "' nomUsuOra ='" + rs.getString("nombre") + "' apeUsuOra='" + rs.getString("apellido") + "' emailUsuOra='" + rs.getString("user") + "' fotoUsuOra='" + rs.getString("fotoPerfil") +"'><i class='bi bi-node-plus-fill'></i></a>");
@@ -176,6 +176,7 @@
                         <form action="../controller/updUsuario.jsp" method="post">
                             <div class="mb-3 text-start">
                                 <input type="hidden" class="form-control mb-3" id="idUpd" name=idUpd>
+                                <input type="hidden" class="form-control mb-3" id="rolUpd" name=rolUpd>
                                 <span>Nombre:</span>
                                 <input type="text" class="form-control mb-3" id="nom" name="nom">
                                 <span>Apellido:</span>

@@ -104,7 +104,7 @@
                             out.println("</td>");
 
                             out.println("<td>");
-                            out.println("<a href='#' title='Borrar orador' data-bs-toggle='modal' data-bs-target='#deleteModal' data-bs-whatever='" + rs.getInt("id") + "'><i class='bi bi-trash-fill'></i></a>");
+                            out.println("<a href='#' title='Borrar orador' data-bs-toggle='modal' data-bs-target='#deleteModal' idDel='" + rs.getInt("id") +"' emailDel='" + rs.getString("email") + "'><i class='bi bi-trash-fill'></i></a>");
                             out.println("<a href='#' title='Modificar orador' data-bs-toggle='modal' data-bs-target='#updateModal' idUpd='" + rs.getInt("id") + "' nom='" + rs.getString("nombre") + "' ape='" + rs.getString("apellido") + "' email='" + rs.getString("email") + "' foto='" + rs.getString("fotoPerfil") + "' etiq='" + rs.getString("etiquetas") + "' etiq2='" + rs.getString("etiquetasDos") + "' temas='" + rs.getString("temas") + "'><i class='bi bi-pencil-fill'></i></a>");
                             out.println("</td>");
 
@@ -161,7 +161,8 @@
                         <form action="../controller/delOrador.jsp" method="post">
                             <div class="mb-3 text-center">
                                 <label for="recipient-name" class="col-form-label">¿Desea eliminar el orador?</label>
-                                <input type="hidden" class="form-control" id="recipient-name" name="id">
+                                <input type="hidden" class="form-control" id="idDel" name="idDel">
+                                <input type="hidden" class="form-control" id="emailDel" name="emailDel">
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
